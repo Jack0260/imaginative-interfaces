@@ -8,7 +8,7 @@ describe("dream engine", () => {
     const p = parseDream("a glowing dashboard that breathes");
     expect(p.archetype).toBe("dashboard");
     expect(p.motions).toEqual(["glow", "breathe"]);
-    expect(p.moods[0].name).toBe("luminous");
+    expect(p.moods[0]?.name).toBe("luminous");
   });
 
   it("defaults to a landing page that drifts", () => {

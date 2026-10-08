@@ -75,7 +75,7 @@ document.addEventListener('pointermove',e=>{document.documentElement.style.setPr
 `;
 
 export function titleFor(p: ParsedDream) {
-  const w = p.unknown[0] ?? p.moods[0]!.name.split("-")[0];
+  const w = p.unknown[0] ?? p.moods[0]!.name.split("-")[0] ?? "Dream";
   return w.charAt(0).toUpperCase() + w.slice(1);
 }
 
