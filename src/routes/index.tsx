@@ -25,11 +25,11 @@ const EXAMPLES = [
   "a login that feels like waking",
   "a cosmic gallery of glass that drifts",
   "an oracle chat made of fog that flickers",
-];
+] as const;
 
 function Index() {
-  const [draft, setDraft] = useState(EXAMPLES[0]);
-  const [dream, setDream] = useState(EXAMPLES[0]);
+  const [draft, setDraft] = useState<string>(EXAMPLES[0]);
+  const [dream, setDream] = useState<string>(EXAMPLES[0]);
   const [tab, setTab] = useState<"preview" | "code">("preview");
   const [stamp, setStamp] = useState(0);
 

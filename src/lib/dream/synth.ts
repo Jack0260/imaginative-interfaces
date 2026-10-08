@@ -23,7 +23,7 @@ const FONT_SETS = [
 ];
 
 export function synthesize(p: ParsedDream): DesignSpec {
-  const primary = p.moods[0];
+  const primary = p.moods[0]!;
   const secondary = p.moods[1];
   const energy = p.moods.reduce((s, m) => s + m.energy, 0) / p.moods.length;
   const light = primary.light && !p.motions.includes("glow");
